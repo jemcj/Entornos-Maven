@@ -1,6 +1,6 @@
 package com.entornos;
 
-public class Producto {
+public abstract class Producto {
     
     private String codigo;
     private String nombre;
@@ -55,5 +55,7 @@ public class Producto {
 
         return salida;
     }
+
+    public abstract double calcularPrecioFinal();
 
 }

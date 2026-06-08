@@ -47,4 +47,12 @@ public class ProductoFisico extends Producto{
         return salida;
     }
 
+    public double calcularPrecioFinal() {
+
+        Double precioFinal = getPrecio() + coste_envio;
+
+        return precioFinal;
+
+    }
+
 }

@@ -36,4 +36,12 @@ public class ProductoDigital extends Producto {
         return salida;
     }
 
+    public double calcularPrecioFinal() {
+
+        double precioFinal = getPrecio() - ((getPrecio() * 10) / 100);
+
+        return precioFinal;
+
+    }
+
 }
