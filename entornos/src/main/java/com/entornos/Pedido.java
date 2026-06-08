@@ -46,13 +46,31 @@ public class Pedido {
     public double precioTotal(){
         double total = 0;
         for(Producto p : listaProductos){
-            total += p.getPrecio();
-            if (p instanceof ProductoFisico) {
-                ProductoFisico pf = (ProductoFisico) p; 
-                total += pf.getCoste_envio();
-            }
+            total += p.calcularPrecioFinal();
         }
         return total;
+    }
+
+    public void mostrarResumen() {
+        System.out.println("Resumen del Pedido");
+        System.out.println("---------------------------------------------------------------");
+        System.out.println("Codigo del pedido: " + codigo_factura);
+        System.out.println("----------------------------------------");
+        System.out.println("Datos del cliente");
+        System.out.println(clientePedido);
+        System.out.println("----------------------------------------");
+        System.out.println("Productos");
+        
+        int contador = 1;
+
+        for (Producto p : listaProductos) {
+            System.out.println("Producto " + contador + ":");
+            System.out.println(p);
+            System.out.println("Precio: " + p.calcularPrecioFinal());
+            contador++;
+        }
+
+        System.out.println("Total de precio del pedido: " + precioTotal());
     }
 
 }
