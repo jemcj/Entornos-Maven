@@ -38,7 +38,7 @@ public class ProductoDigital extends Producto {
 
     public double calcularPrecioFinal() {
 
-        double precioFinal = getPrecio() - ((getPrecio() * 10) / 100);
+        double precioFinal = getPrecio() + (1 + 0.21);
 
         return precioFinal;
 
