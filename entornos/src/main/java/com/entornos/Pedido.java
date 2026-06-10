@@ -58,7 +58,7 @@ public class Pedido {
         System.out.println("----------------------------------------");
         System.out.println("Datos del cliente");
         System.out.println(clientePedido);
-        System.out.println("----------------------------------------");
+        System.out.println("----------------------------------------\n");
         System.out.println("Productos");
         
         int contador = 1;
@@ -66,7 +66,7 @@ public class Pedido {
         for (Producto p : listaProductos) {
             System.out.println("Producto " + contador + ":");
             System.out.println(p);
-            System.out.println("Precio: " + p.calcularPrecioFinal());
+            System.out.println("Precio: " + p.calcularPrecioFinal() + "\n");
             contador++;
         }
 

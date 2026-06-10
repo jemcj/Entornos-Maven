@@ -1,0 +1,89 @@
+@startuml aplicacion
+skinparam classAttributeIconSize 0
+hide circle
+
+class app {
+    + {static} main(args: String[]): void
+}
+
+class cliente {
+    -nombreCliente: String
+    -correoCliente: String
+    -direccionCliente: String
+    --
+    +cliente(nombreCliente: String, correoCliente: String, direccionCliente: String)
+    +getNombreCliente(): String
+    +setNombre(nombreCliente: String): void
+    +getCorreoCliente(): String
+    +setCorreo(correoCliente: String): void
+    +getDireccionCliente(): String
+    +setDireccion(direccionCliente: String): void
+    +toString(): String
+}
+
+class pedido {
+  -codigoFactura: String
+  -clientePedido: cliente
+  -listaProductos: List<producto>
+  --
+  +pedido(codigoFactura: String, cliente: cliente)
+  +getCodigoFactura(): String
+  +setCodigoFactura(codigoFactura: String): void
+  +getClientePedido(): cliente
+  +setClientePedido(clientePedido: cliente): void
+  +getListaProductos(): List<producto>
+  +setListaProductos(listaProductos: List<producto>): void
+  +agregarProducto(producto: producto): void
+  +precioTotal(): double
+}
+
+class producto {
+  -codigoProducto: String
+  -nombreProducto: String
+  -autorProducto: String
+  -precioProducto: double
+  --
+  +producto(codigoProducto: String, nombreProducto: String, autorProducto: String, precioProducto: double)
+  +getCodigoProducto(): String
+  +setCodigoProducto(codigoProducto: String): void
+  +getNombreProducto(): String
+  +setNombreProducto(nombreProducto: String): void
+  +getAutorProducto(): String
+  +setAutorProducto(autorProducto: String): void
+  +getPrecioProducto(): double
+  +setPrecioProducto(precioProducto: double): void
+  +toString(): String
+}
+
+class productoDigital {
+  -tamagnoDescarga: int
+  -tipoFormato: String
+  --
+  +productoDigital(codigoProducto: String, nombreProducto: String, autorProducto: String, precioProducto: double, tamagnoDescarga: int, tipoFormato: String)
+  +getTamagnoDescarga(): int
+  +setTamagnoDescarga(tamagnoDescarga: int): void
+  +getTipoFormato(): String
+  +setTipoFormato(tipoFormato: String): void
+  +toString(): String
+}
+
+class productoFisico {
+  -numeroPaginas: int
+  -costeEnvio: double
+  -codigoSeguimiento: String
+  --
+  +productoFisico(codigoProducto: String, nombreProducto: String, autorProducto: String, precioProducto: double, numeroPaginas: int, costeEnvio: double, codigoSeguimiento: String)
+  +getNumeroPaginas(): int
+  +setNumeroPaginas(numeroPaginas: int): void
+  +getCosteEnvio(): double
+  +setCosteEnvio(costeEnvio: double): void
+  +getCodigoSeguimiento(): String
+  +setCodigoSeguimiento(codigoSeguimiento: String): void
+  +toString(): String
+}
+
+pedido *-- cliente
+pedido o-- producto
+productoDigital --|> producto
+productoFisico --|> producto
+@enduml
