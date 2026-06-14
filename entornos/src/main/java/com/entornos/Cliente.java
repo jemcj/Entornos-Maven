@@ -40,7 +40,7 @@ public class Cliente {
     public String toString(){
         String salida = "Nombre: " + this.nombre + "\n";
         salida += "Correo: " + this.correo + "\n";
-        salida += "Direccion: " + this.direccion;
+        salida += "Direccion: " + this.direccion + "\n";
 
         return salida;
     }

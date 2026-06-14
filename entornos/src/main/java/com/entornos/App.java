@@ -13,7 +13,9 @@ public class App {
         pe1.agregarProducto(pr1);
         pe1.agregarProducto(pr2);
         pe1.agregarProducto(pr3);
-        pe1.mostrarResumen();
+
+        String resumen = pe1.mostrarResumen();
+        System.out.println(resumen);
 
     }
 

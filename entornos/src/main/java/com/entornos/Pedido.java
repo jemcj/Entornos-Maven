@@ -59,18 +59,20 @@ public class Pedido {
         resumen.append("Codigo del pedido: " + codigo_factura + "\n");
         resumen.append("----------------------------------------" + "\n");
         resumen.append("Datos del cliente" + "\n");
-        resumen.append(codigo_factura);
+        resumen.append(clientePedido);
         resumen.append("----------------------------------------" + "\n");
-        resumen.append("Productos");
+        resumen.append("Productos" + "\n");
         
         int contador = 1;
 
         for (Producto p : listaProductos) {
+            resumen.append("----------------------------------------" + "\n");
             resumen.append("Producto " + contador + ":" + "\n");
             resumen.append(p);
             resumen.append("Precio: " + p.calcularPrecioFinal() + "\n");
         }
 
+        resumen.append("----------------------------------------" + "\n");
         resumen.append("Total de precio del pedido: " + precioTotal());
 
         String sResumen = resumen.toString();
