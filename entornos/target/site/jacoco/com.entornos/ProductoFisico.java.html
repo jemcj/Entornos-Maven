@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ProductoFisico.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">entornos</a> &gt; <a href="index.source.html" class="el_package">com.entornos</a> &gt; <span class="el_source">ProductoFisico.java</span></div><h1>ProductoFisico.java</h1><pre class="source lang-java linenums">package com.entornos;
+
+public class ProductoFisico extends Producto{
+    
+    private int numero_paginas;
+    private double coste_envio;
+    private String codigo_seguimiento;
+
+    public ProductoFisico (String codigo, String nombre, String autor, double precio, int numero_paginas, double coste_envio, String codigo_seguimiento){
+<span class="fc" id="L10">        super(codigo, nombre, autor, precio);</span>
+<span class="fc" id="L11">        this.numero_paginas = numero_paginas;</span>
+<span class="fc" id="L12">        this.coste_envio = coste_envio;</span>
+<span class="fc" id="L13">        this.codigo_seguimiento = codigo_seguimiento;</span>
+<span class="fc" id="L14">    }</span>
+
+    public int getNumero_paginas() {
+<span class="nc" id="L17">        return numero_paginas;</span>
+    }
+
+    public void setNumero_paginas(int numero_paginas) {
+<span class="nc" id="L21">        this.numero_paginas = numero_paginas;</span>
+<span class="nc" id="L22">    }</span>
+
+    public double getCoste_envio() {
+<span class="nc" id="L25">        return coste_envio;</span>
+    }
+
+    public void setCoste_envio(double coste_envio) {
+<span class="nc" id="L29">        this.coste_envio = coste_envio;</span>
+<span class="nc" id="L30">    }</span>
+
+    public String getCodigo_seguimiento() {
+<span class="nc" id="L33">        return codigo_seguimiento;</span>
+    }
+
+    public void setCodigo_seguimiento(String codigo_seguimiento) {
+<span class="nc" id="L37">        this.codigo_seguimiento = codigo_seguimiento;</span>
+<span class="nc" id="L38">    }</span>
+
+    @Override
+    public String toString(){
+<span class="fc" id="L42">        String salida = super.toString();</span>
+<span class="fc" id="L43">        salida += &quot;Numero de paginas: &quot; + this.numero_paginas + &quot;\n&quot;;</span>
+<span class="fc" id="L44">        salida += &quot;Coste de envio: &quot; + this.coste_envio + &quot;\n&quot;;</span>
+<span class="fc" id="L45">        salida += &quot;Codigo de seguimiento: &quot; + this.codigo_seguimiento;</span>
+
+<span class="fc" id="L47">        return salida;</span>
+    }
+
+    public double calcularPrecioFinal() {
+
+<span class="fc" id="L52">        Double precioFinal = getPrecio() + coste_envio;</span>
+
+<span class="fc" id="L54">        return precioFinal;</span>
+
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

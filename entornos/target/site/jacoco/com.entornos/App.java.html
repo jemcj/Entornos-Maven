@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>App.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">entornos</a> &gt; <a href="index.source.html" class="el_package">com.entornos</a> &gt; <span class="el_source">App.java</span></div><h1>App.java</h1><pre class="source lang-java linenums">package com.entornos;
+
+<span class="nc" id="L3">public class App {</span>
+
+    public static void main(String[] args) {
+<span class="nc" id="L6">        System.out.println(&quot;- Cliente:&quot;);</span>
+<span class="nc" id="L7">        Cliente c1 = new Cliente(&quot;Fernando Alonso&quot;, &quot;elnano@gmail,com&quot;, &quot;Calle Desengaño, 33&quot;);</span>
+<span class="nc" id="L8">        ProductoFisico pr1 = new ProductoFisico(&quot;1993XJ220&quot;, &quot;F1: Anatomia de una pasion&quot;, &quot;Victor Abad&quot;, 19.95, 239, 4, &quot;98JS9684DH4&quot;);</span>
+<span class="nc" id="L9">        ProductoDigital pr2 = new ProductoDigital(&quot;2010RB600&quot;, &quot;Como hacer un coche&quot;, &quot;Adrian Newey&quot;, 27.50, 6, &quot;PDF&quot;);</span>
+<span class="nc" id="L10">        ProductoDigital pr3 = new ProductoDigital(&quot;1988MP404&quot;, &quot;Los Juegos del Hambre&quot;, &quot;Suzanne Collins&quot;, 12.30, 4, &quot;PDF&quot;);</span>
+
+<span class="nc" id="L12">        Pedido pe1 = new Pedido(&quot;F01I91U10M88&quot;, c1);</span>
+<span class="nc" id="L13">        pe1.agregarProducto(pr1);</span>
+<span class="nc" id="L14">        pe1.agregarProducto(pr2);</span>
+<span class="nc" id="L15">        pe1.agregarProducto(pr3);</span>
+
+<span class="nc" id="L17">        String resumen = pe1.mostrarResumen();</span>
+<span class="nc" id="L18">        System.out.println(resumen);</span>
+
+<span class="nc" id="L20">    }</span>
+
+}
+
+
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>
