@@ -67,7 +67,6 @@ public class Pedido {
             System.out.println("Producto " + contador + ":");
             System.out.println(p);
             System.out.println("Precio: " + p.calcularPrecioFinal() + "\n");
-            contador++;
         }
 
         System.out.println("Total de precio del pedido: " + precioTotal());
