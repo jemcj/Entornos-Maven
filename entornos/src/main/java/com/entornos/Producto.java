@@ -8,6 +8,9 @@ public abstract class Producto {
     private double precio;
 
     public Producto (String codigo, String nombre, String autor, double precio){
+        if (precio < 0) {
+            throw new IllegalArgumentException("El precio no puede ser negativo");
+        }
         this.codigo = codigo;
         this.nombre = nombre;
         this.autor = autor;

@@ -7,6 +7,9 @@ public class Cliente {
     private String direccion;
 
     public Cliente (String nombre, String correo, String direccion){
+        if (direccion == null || direccion.isEmpty()) {
+            throw new IllegalArgumentException("La dirección no puede estar vacía");
+        }
         this.nombre = nombre;
         this.correo = correo;
         this.direccion = direccion;

@@ -10,6 +10,9 @@ public class Pedido {
     private List<Producto> listaProductos;
 
     public Pedido (String codigo_factura, Cliente cliente){
+        if (cliente ==  null) {
+            throw new IllegalArgumentException("El cliente no puede ser null");
+        }
         this.codigo_factura = codigo_factura;
         this.clientePedido = cliente;
         this.listaProductos = new ArrayList<Producto>();
@@ -40,6 +43,9 @@ public class Pedido {
     }
 
     public void agregarProducto(Producto producto){
+        if (producto == null) {
+            throw new IllegalArgumentException("El producto no puede ser null");
+        }
         this.listaProductos.add(producto);
     }
 
