@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.entornos.PedidoTest" time="0.292" tests="7" errors="0" skipped="0" failures="3">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.entornos.PedidoTest" time="0.301" tests="7" errors="0" skipped="0" failures="3">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="ES"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Microsoft\jdk-21.0.8.9-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\PC\AppData\Local\Temp\surefire1490939493180619398\surefirebooter-20260614211421229_3.jar C:\Users\PC\AppData\Local\Temp\surefire1490939493180619398 2026-06-14T21-14-21_065-jvmRun1 surefire-20260614211421229_1tmp surefire_0-20260614211421229_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\PC\AppData\Local\Temp\surefire16161498469947347674\surefirebooter-20260614212121494_3.jar C:\Users\PC\AppData\Local\Temp\surefire16161498469947347674 2026-06-14T21-21-21_323-jvmRun1 surefire-20260614212121494_1tmp surefire_0-20260614212121494_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="c:\Users\PC\Desktop\Instituto\25-26 1º DAW\Entornos de Desarrollo\Entornos-Maven\entornos\target\test-classes;c:\Users\PC\Desktop\Instituto\25-26 1º DAW\Entornos de Desarrollo\Entornos-Maven\entornos\target\classes;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\PC\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\PC\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\PC\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\PC\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\PC\AppData\Local\Temp\surefire1490939493180619398\surefirebooter-20260614211421229_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\PC\AppData\Local\Temp\surefire16161498469947347674\surefirebooter-20260614212121494_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.8+9-LTS"/>
@@ -59,10 +59,10 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="T09_agregarProducto_null_lanzaExcepcion" classname="com.entornos.PedidoTest" time="0.011"/>
-  <testcase name="T04_agregarProducto_aumentaLista" classname="com.entornos.PedidoTest" time="0.003"/>
-  <testcase name="T03_precioTotal_parametrizado(double, double, double, double)[1]" classname="com.entornos.PedidoTest" time="0.06">
-    <failure message="expected: &lt;24.1&gt; but was: &lt;19.9&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <24.1> but was: <19.9>
+  <testcase name="T09_agregarProducto_null_lanzaExcepcion" classname="com.entornos.PedidoTest" time="0.005"/>
+  <testcase name="T04_agregarProducto_aumentaLista" classname="com.entornos.PedidoTest" time="0.0"/>
+  <testcase name="T03_precioTotal_parametrizado(double, double, double, double)[1]" classname="com.entornos.PedidoTest" time="0.048">
+    <failure message="expected: &lt;24.1&gt; but was: &lt;32.21&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <24.1> but was: <32.21>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
 	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
@@ -104,8 +104,8 @@
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 ]]></failure>
   </testcase>
-  <testcase name="T03_precioTotal_parametrizado(double, double, double, double)[2]" classname="com.entornos.PedidoTest" time="0.004">
-    <failure message="expected: &lt;48.2&gt; but was: &lt;39.8&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <48.2> but was: <39.8>
+  <testcase name="T03_precioTotal_parametrizado(double, double, double, double)[2]" classname="com.entornos.PedidoTest" time="0.005">
+    <failure message="expected: &lt;48.2&gt; but was: &lt;64.21000000000001&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <48.2> but was: <64.21000000000001>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
 	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
@@ -147,8 +147,8 @@
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 ]]></failure>
   </testcase>
-  <testcase name="T03_precioTotal_parametrizado(double, double, double, double)[3]" classname="com.entornos.PedidoTest" time="0.003">
-    <failure message="expected: &lt;91.3&gt; but was: &lt;78.7&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <91.3> but was: <78.7>
+  <testcase name="T03_precioTotal_parametrizado(double, double, double, double)[3]" classname="com.entornos.PedidoTest" time="0.005">
+    <failure message="expected: &lt;91.3&gt; but was: &lt;115.21000000000001&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <91.3> but was: <115.21000000000001>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
 	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
@@ -190,6 +190,6 @@
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 ]]></failure>
   </testcase>
-  <testcase name="T07_pedido_clienteNull_lanzaExcepcion" classname="com.entornos.PedidoTest" time="0.002"/>
-  <testcase name="T10_mostrarResumen_contieneNombreCliente" classname="com.entornos.PedidoTest" time="0.026"/>
+  <testcase name="T07_pedido_clienteNull_lanzaExcepcion" classname="com.entornos.PedidoTest" time="0.0"/>
+  <testcase name="T10_mostrarResumen_contieneNombreCliente" classname="com.entornos.PedidoTest" time="0.031"/>
 </testsuite>

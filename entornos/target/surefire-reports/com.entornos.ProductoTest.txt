@@ -1,9 +1,9 @@
 -------------------------------------------------------------------------------
 Test set: com.entornos.ProductoTest
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.104 s <<< FAILURE! -- in com.entornos.ProductoTest
-com.entornos.ProductoTest.T02_calcularPrecioFinal_digital_parametrizado(double)[1] -- Time elapsed: 0.016 s <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <12.1> but was: <7.9>
+Tests run: 10, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.115 s <<< FAILURE! -- in com.entornos.ProductoTest
+com.entornos.ProductoTest.T02_calcularPrecioFinal_digital_parametrizado(double)[1] -- Time elapsed: 0.018 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <12.1> but was: <20.21>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
 	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
@@ -51,8 +51,8 @@ org.opentest4j.AssertionFailedError: expected: <12.1> but was: <7.9>
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 
-com.entornos.ProductoTest.T02_calcularPrecioFinal_digital_parametrizado(double)[2] -- Time elapsed: 0.007 s <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <24.2> but was: <15.8>
+com.entornos.ProductoTest.T02_calcularPrecioFinal_digital_parametrizado(double)[2] -- Time elapsed: 0.005 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <24.2> but was: <40.21>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
 	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
@@ -100,8 +100,8 @@ org.opentest4j.AssertionFailedError: expected: <24.2> but was: <15.8>
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 
-com.entornos.ProductoTest.T02_calcularPrecioFinal_digital_parametrizado(double)[3] -- Time elapsed: 0.001 s <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <60.5> but was: <39.5>
+com.entornos.ProductoTest.T02_calcularPrecioFinal_digital_parametrizado(double)[3] -- Time elapsed: 0.007 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <60.5> but was: <100.21000000000001>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
 	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
@@ -149,8 +149,8 @@ org.opentest4j.AssertionFailedError: expected: <60.5> but was: <39.5>
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 
-com.entornos.ProductoTest.T02_calcularPrecioFinal_digital_parametrizado(double)[4] -- Time elapsed: 0.023 s <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <121.0> but was: <79.0>
+com.entornos.ProductoTest.T02_calcularPrecioFinal_digital_parametrizado(double)[4] -- Time elapsed: 0 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <121.0> but was: <200.20999999999998>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
 	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
