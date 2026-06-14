@@ -51,25 +51,32 @@ public class Pedido {
         return total;
     }
 
-    public void mostrarResumen() {
-        System.out.println("Resumen del Pedido");
-        System.out.println("---------------------------------------------------------------");
-        System.out.println("Codigo del pedido: " + codigo_factura);
-        System.out.println("----------------------------------------");
-        System.out.println("Datos del cliente");
-        System.out.println(clientePedido);
-        System.out.println("----------------------------------------\n");
-        System.out.println("Productos");
+    public String mostrarResumen() {
+
+        StringBuilder resumen = new StringBuilder("Resumen del Pedido" + "\n");
+
+        resumen.append("---------------------------------------------------------------" + "\n");
+        resumen.append("Codigo del pedido: " + codigo_factura + "\n");
+        resumen.append("----------------------------------------" + "\n");
+        resumen.append("Datos del cliente" + "\n");
+        resumen.append(codigo_factura);
+        resumen.append("----------------------------------------" + "\n");
+        resumen.append("Productos");
         
         int contador = 1;
 
         for (Producto p : listaProductos) {
-            System.out.println("Producto " + contador + ":");
-            System.out.println(p);
-            System.out.println("Precio: " + p.calcularPrecioFinal() + "\n");
+            resumen.append("Producto " + contador + ":" + "\n");
+            resumen.append(p);
+            resumen.append("Precio: " + p.calcularPrecioFinal() + "\n");
         }
 
-        System.out.println("Total de precio del pedido: " + precioTotal());
+        resumen.append("Total de precio del pedido: " + precioTotal());
+
+        String sResumen = resumen.toString();
+
+        return sResumen;
+
     }
 
 }
