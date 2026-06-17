@@ -14,9 +14,7 @@ public class Pedido {
         if (cliente ==  null) {
             throw new IllegalArgumentException("El cliente no puede ser null");
         }
-        if (listaProductos.isEmpty()) {
-            throw new IllegalArgumentException("La lista de productos no puede estar vacía");
-        }
+        
         this.id_pedido = codigo_factura;
         this.cliente = cliente;
         this.listaProductos = new ArrayList<Producto>();
