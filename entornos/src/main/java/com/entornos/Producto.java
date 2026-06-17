@@ -2,27 +2,27 @@ package com.entornos;
 
 public abstract class Producto {
     
-    private String codigo;
+    private String id;
     private String nombre;
     private String autor;
-    private double precio;
+    private double precioBase;
 
     public Producto (String codigo, String nombre, String autor, double precio){
         if (precio < 0) {
             throw new IllegalArgumentException("El precio no puede ser negativo");
         }
-        this.codigo = codigo;
+        this.id = codigo;
         this.nombre = nombre;
         this.autor = autor;
-        this.precio = precio;
+        this.precioBase = precio;
     }
 
-    public String getCodigo() {
-        return codigo;
+    public String getId() {
+        return id;
     }
 
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
+    public void setId(String codigo) {
+        this.id = codigo;
     }
 
     public String getNombre() {
@@ -41,20 +41,20 @@ public abstract class Producto {
         this.autor = autor;
     }
 
-    public double getPrecio() {
-        return precio;
+    public double getPrecioBase() {
+        return precioBase;
     }
 
-    public void setPrecio(double precio) {
-        this.precio = precio;
+    public void setPrecioBase(double precioBase) {
+        this.precioBase = precioBase;
     }
 
     @Override
     public String toString(){
-        String salida = "Codigo: " + this.codigo + "\n";
+        String salida = "Codigo: " + this.id + "\n";
         salida += "Nombre: " + this.nombre + "\n";
         salida += "Autor: " + this.autor + "\n";
-        salida += "Precio: " + this.precio + "\n";
+        salida += "Precio: " + this.precioBase + "\n";
 
         return salida;
     }
