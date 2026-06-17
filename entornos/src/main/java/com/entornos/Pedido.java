@@ -14,6 +14,9 @@ public class Pedido {
         if (cliente ==  null) {
             throw new IllegalArgumentException("El cliente no puede ser null");
         }
+        if (listaProductos.isEmpty()) {
+            throw new IllegalArgumentException("La lista de productos no puede estar vacía");
+        }
         this.id_pedido = codigo_factura;
         this.cliente = cliente;
         this.listaProductos = new ArrayList<Producto>();
@@ -57,6 +60,14 @@ public class Pedido {
             throw new IllegalArgumentException("El producto no puede ser null");
         }
         this.listaProductos.add(producto);
+    }
+
+    public void eliminarProducto(String borrado){
+        for (Producto p : listaProductos) {
+            if (p.getId().equals(borrado) || p.getNombre().equals(borrado)) {
+                listaProductos.remove(p);
+            }
+        }
     }
 
     public double precioTotal(){
