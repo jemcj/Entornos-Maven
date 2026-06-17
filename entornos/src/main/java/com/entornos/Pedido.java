@@ -5,33 +5,35 @@ import java.util.List;
 
 public class Pedido {
     
-    private String codigo_factura;
-    private Cliente clientePedido;
+    private String id_pedido;
+    private Cliente cliente;
     private List<Producto> listaProductos;
+    private int cantidades;
 
-    public Pedido (String codigo_factura, Cliente cliente){
+    public Pedido (String codigo_factura, Cliente cliente, int cantidades){
         if (cliente ==  null) {
             throw new IllegalArgumentException("El cliente no puede ser null");
         }
-        this.codigo_factura = codigo_factura;
-        this.clientePedido = cliente;
+        this.id_pedido = codigo_factura;
+        this.cliente = cliente;
         this.listaProductos = new ArrayList<Producto>();
+        this.cantidades = cantidades;
     }
 
-    public String getCodigo_factura() {
-        return codigo_factura;
+    public String getId_pedido() {
+        return id_pedido;
     }
 
-    public void setCodigo_factura(String codigo_factura) {
-        this.codigo_factura = codigo_factura;
+    public void setId_pedido(String id_pedido) {
+        this.id_pedido = id_pedido;
     }
 
-    public Cliente getClientePedido() {
-        return clientePedido;
+    public Cliente getCliente() {
+        return cliente;
     }
 
-    public void setClientePedido(Cliente clientePedido) {
-        this.clientePedido = clientePedido;
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 
     public List<Producto> getListaProductos() {
@@ -40,6 +42,14 @@ public class Pedido {
 
     public void setListaProductos(List<Producto> listaProductos) {
         this.listaProductos = listaProductos;
+    }
+
+    public int getCantidades() {
+        return cantidades;
+    }
+
+    public void setCantidades(int cantidades) {
+        this.cantidades = cantidades;
     }
 
     public void agregarProducto(Producto producto){
@@ -62,10 +72,10 @@ public class Pedido {
         StringBuilder resumen = new StringBuilder("Resumen del Pedido" + "\n");
 
         resumen.append("---------------------------------------------------------------" + "\n");
-        resumen.append("Codigo del pedido: " + codigo_factura + "\n");
+        resumen.append("Codigo del pedido: " + id_pedido + "\n");
         resumen.append("----------------------------------------" + "\n");
         resumen.append("Datos del cliente" + "\n");
-        resumen.append(clientePedido);
+        resumen.append(cliente);
         resumen.append("----------------------------------------" + "\n");
         resumen.append("Productos" + "\n");
         
