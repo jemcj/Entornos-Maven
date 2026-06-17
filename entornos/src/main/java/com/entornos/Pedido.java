@@ -73,39 +73,49 @@ public class Pedido {
     public double precioTotal(){
         double total = 0;
         for(Producto p : listaProductos){
-            total += p.calcularPrecioFinal();
+            total += p.calcularPrecioFinal(cliente);
         }
         return total;
     }
 
-    public String mostrarResumen() {
+    public double precioTotalSinAgnadidos(){
+        double total = 0;
+        for(Producto p : listaProductos){
+            total += p.getPrecioBase();
+        }
+        return total;
+    }
 
-        StringBuilder resumen = new StringBuilder("Resumen del Pedido" + "\n");
+    public double calculoTotalIVA(){
+        double total = 0;
 
-        resumen.append("---------------------------------------------------------------" + "\n");
-        resumen.append("Codigo del pedido: " + id_pedido + "\n");
-        resumen.append("----------------------------------------" + "\n");
-        resumen.append("Datos del cliente" + "\n");
-        resumen.append(cliente);
-        resumen.append("----------------------------------------" + "\n");
-        resumen.append("Productos" + "\n");
-        
-        int contador = 1;
+        for(Producto p : listaProductos){
 
-        for (Producto p : listaProductos) {
-            resumen.append("----------------------------------------" + "\n");
-            resumen.append("Producto " + contador + ":" + "\n");
-            resumen.append(p);
-            resumen.append("Precio: " + p.calcularPrecioFinal() + "\n");
+            if (p instanceof ProductoDigital pd) {
+
+                total += pd.aplicarIVA(cliente.setTipoIVA());
+                
+            }
+
         }
 
-        resumen.append("----------------------------------------" + "\n");
-        resumen.append("Total de precio del pedido: " + precioTotal());
+        return total;
+    }
 
-        String sResumen = resumen.toString();
+    public double calculoTotalEnvio(){
+        double total = 0;
 
-        return sResumen;
+        for(Producto p : listaProductos){
 
+            if (p instanceof ProductoFisico pf) {
+
+               total += pf.costeEnvio(cliente.getPais());
+               
+            }
+
+        }
+
+        return total;
     }
 
 }

@@ -75,9 +75,9 @@ public class ProductoDigital extends Producto {
 
     }
 
-    public double calcularPrecioFinal() {
+    public double calcularPrecioFinal(Cliente c) {
 
-        double precioFinal = getPrecioBase() + aplicarIVA(tipo_IVA);
+        double precioFinal = getPrecioBase() + aplicarIVA(c.setTipoIVA());
 
         return precioFinal;
 

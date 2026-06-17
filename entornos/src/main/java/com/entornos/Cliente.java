@@ -92,4 +92,27 @@ public class Cliente {
         return salida;
     }
 
+    public String setTipoIVA () {
+
+        String tipo = "";
+
+        if (esVip == true || agnos_antiguedad >= 10) {
+
+            tipo = "SUPER";
+            return tipo;
+
+        } else if (agnos_antiguedad >= 5) {
+
+            tipo = "REDUCIDO";
+            return tipo;
+
+        } else {
+
+            tipo = "GENERAL";
+            return tipo;
+
+        }
+
+    }
+
 }

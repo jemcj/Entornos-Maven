@@ -59,6 +59,6 @@ public abstract class Producto {
         return salida;
     }
 
-    public abstract double calcularPrecioFinal();
+    public abstract double calcularPrecioFinal(Cliente c);
 
 }

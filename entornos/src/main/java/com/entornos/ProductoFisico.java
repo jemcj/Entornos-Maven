@@ -4,14 +4,12 @@ public class ProductoFisico extends Producto{
     
     private int numero_paginas;
     private String codigo_seguimiento;
-    private String lugar_envio;
     private int peso;
 
-    public ProductoFisico (String codigo, String nombre, String autor, double precio, int numero_paginas, String codigo_seguimiento, String lugar_envio, int peso){
+    public ProductoFisico (String codigo, String nombre, String autor, double precio, int numero_paginas, String codigo_seguimiento, int peso){
         super(codigo, nombre, autor, precio);
         this.numero_paginas = numero_paginas;
         this.codigo_seguimiento = codigo_seguimiento;
-        this.lugar_envio = lugar_envio;
         this.peso = peso;
     }
 
@@ -31,14 +29,6 @@ public class ProductoFisico extends Producto{
         this.codigo_seguimiento = codigo_seguimiento;
     }
 
-    public String getLugar_envio() {
-        return lugar_envio;
-    }
-
-    public void setLugar_envio(String lugar_envio) {
-        this.lugar_envio = lugar_envio;
-    }
-
     public int getPeso() {
         return peso;
     }
@@ -52,7 +42,6 @@ public class ProductoFisico extends Producto{
         String salida = super.toString();
         salida += "Numero de paginas: " + this.numero_paginas + "\n";
         salida += "Codigo de seguimiento: " + this.codigo_seguimiento + "\n";
-        salida += "Lugar de envío: " + this.lugar_envio + "\n";
         salida += "Peso: " + this.peso;
 
         return salida;
@@ -62,11 +51,11 @@ public class ProductoFisico extends Producto{
 
         int coste = -1;
 
-        if (lugar_envio.equalsIgnoreCase("España")) {
+        if (pais.equalsIgnoreCase("España")) {
 
             coste = 0;
 
-        } else if (lugar_envio.equalsIgnoreCase("Francia") || lugar_envio.equalsIgnoreCase("Italia") || lugar_envio.equalsIgnoreCase("Portugal")) {
+        } else if (pais.equalsIgnoreCase("Francia") || pais.equalsIgnoreCase("Italia") || pais.equalsIgnoreCase("Portugal")) {
 
             coste = 5;
 
@@ -80,9 +69,9 @@ public class ProductoFisico extends Producto{
 
     }
 
-    public double calcularPrecioFinal() {
+    public double calcularPrecioFinal(Cliente c) {
 
-        Double precioFinal = getPrecioBase() + costeEnvio(lugar_envio);
+        Double precioFinal = getPrecioBase() + costeEnvio(c.getPais());
 
         return precioFinal;
 
