@@ -14,7 +14,6 @@ public class Pedido {
         if (cliente ==  null) {
             throw new IllegalArgumentException("El cliente no puede ser null");
         }
-        
         this.id_pedido = codigo_factura;
         this.cliente = cliente;
         this.listaProductos = new ArrayList<Producto>();
@@ -69,6 +68,9 @@ public class Pedido {
     }
 
     public double precioTotal(){
+        if (listaProductos.isEmpty()) {
+            throw new IllegalArgumentException("La lista de productos no puede estar vacía");    
+        }
         double total = 0;
         for(Producto p : listaProductos){
             total += p.calcularPrecioFinal(cliente);
@@ -77,6 +79,9 @@ public class Pedido {
     }
 
     public double precioTotalSinAgnadidos(){
+        if (listaProductos.isEmpty()) {
+            throw new IllegalArgumentException("La lista de productos no puede estar vacía");    
+        }
         double total = 0;
         for(Producto p : listaProductos){
             total += p.getPrecioBase();
@@ -85,6 +90,9 @@ public class Pedido {
     }
 
     public double calculoTotalIVA(){
+        if (listaProductos.isEmpty()) {
+            throw new IllegalArgumentException("La lista de productos no puede estar vacía");    
+        }
         double total = 0;
 
         for(Producto p : listaProductos){
@@ -101,6 +109,9 @@ public class Pedido {
     }
 
     public double calculoTotalEnvio(){
+        if (listaProductos.isEmpty()) {
+            throw new IllegalArgumentException("La lista de productos no puede estar vacía");    
+        }
         double total = 0;
 
         for(Producto p : listaProductos){
