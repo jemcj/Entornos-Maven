@@ -39,7 +39,7 @@ public class Tienda {
         total_envio = p.calculoTotalEnvio();
         total_final = p.precioTotal();
 
-        Factura factura = new Factura(0, null, total_neto, total_IVA, total_envio, total_final);
+        Factura factura = new Factura((int) (Math.random() * 90000000) + 10000000, null, total_neto, total_IVA, total_envio, total_final);
         return factura;
 
     }
