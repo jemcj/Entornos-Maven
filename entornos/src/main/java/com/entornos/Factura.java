@@ -65,5 +65,18 @@ public class Factura {
     public void setTotal_final(double total_final) {
         this.total_final = total_final;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder factura = new StringBuilder(" ---/ Factura /---" + "\n");
+        factura.append("Codigo: " + this.codigo_factura + "\n");
+        factura.append("Fecha: " + this.fecha_emision + "\n");
+        factura.append("Precio total neto: " + this.total_neto + "\n");
+        factura.append("Coste total del IVA: " + this.total_IVA + "\n");
+        factura.append("Coste total del envio: " + this.total_envio + "\n" + "\n");
+        factura.append("PRECIO TOTAL: " + this.total_final);
+        
+        return factura.toString();
+    }
     
 }
